@@ -1,0 +1,72 @@
+
+body{
+    background-image: url("iphone.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    background-attachment: fixed;
+}
+.section{
+  display:flex;
+  padding: 30px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height:80vh;
+}
+
+@media screen and (min-width:300px){
+    body{
+        background-image: url("iphone.jpg");
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center center;
+        background-attachment: fixed;
+     }
+    
+    .titre{
+        font-family: 'Unbounded', cursive;
+        color:aliceblue;
+        background-color: rgba(112, 135, 101, 0.635);
+        border-radius:10px ;
+        padding:10px;
+        font-size: 1.9em;
+        margin-right:27px;
+    }
+    #result-area{
+        font-size: 0.8em;
+        margin-right:27px;
+        font-family: 'Unbounded', cursive;
+        margin-bottom: 10px;
+        margin-top:10px;
+        color:aliceblue;
+        background-color: rgba(112, 135, 101, 0.929);
+    }
+    #chance-area{
+        font-size: 0.8em;
+        margin-right:27px;
+        font-family: 'Unbounded', cursive;
+        margin-bottom: 10px;
+        margin-top:10px;
+        color:rgb(249, 138, 1);
+         }
+    #input-number{
+        height:30px;
+        padding:10px;
+        font-size: 15px;
+        width:145px;
+        margin-right:27px;
+        border:1px solid rgb(155, 153, 151);
+
+    }
+    button{
+        height:45px;
+        width:167px;
+        padding:10px;
+        margin-right:27px;
+        border:1px solid rgb(155, 153, 151);
+    }
+    button:hover{
+       background-color:rgb(121, 214, 138);
+    }
+}
