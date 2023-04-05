@@ -31,7 +31,7 @@ getRandomNum();
 function play() {
   let userValue = inputNumber.value;
   if (userValue < 1 || userValue > 100) {
-    resultArea.textContent = "Enter a number between 1 and 100.";
+    resultArea.textContent = "Enter a number between 1 & 100.";
     return;
   }
 
