@@ -74,4 +74,6 @@ function reset() {
   if (gameOver == true) {
     playButton.disabled = false;
   }
+  getRandomNum();
+
 }
