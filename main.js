@@ -68,12 +68,12 @@ function reset() {
   getRandomNum();
   //  새로운 지시어를 입력해 ui에서 보여져야함
   resultArea.textContent = "Re Start";
-  if (chances < 5) {
-    gameOver = true;
-  }
-  if (gameOver == true) {
-    playButton.disabled = false;
-  }
-  getRandomNum();
 
+  gameOver = false;
+  playButton.disabled = false;
+  chances = 5;
+  chanceArea.innerHTML = `Remaining chance:${chances}`;
+  history = [];
+  
 }
+getRandomNum();
