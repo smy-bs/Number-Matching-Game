@@ -17,16 +17,26 @@ let chances = 5;
 let gameOver = false;
 let chanceArea = document.getElementById("chance-area");
 let history = [];
+
 playButton.addEventListener("click", play);
 ResetButton.addEventListener("click", reset);
 inputNumber.addEventListener("focus", function () {
+  // input 포커스가 되면 입력값 초기화
   inputNumber.value = "";
 });
+
+inputNumber.addEventListener("keydown", function (event) {
+  if(event.key === "Enter"){
+
+    play();
+  }
+});
+
 function getRandomNum() {
   computerNumber = Math.floor(Math.random() * 100) + 1;
   console.log("correct", computerNumber);
 }
-getRandomNum();
+
 
 function play() {
   let userValue = inputNumber.value;
