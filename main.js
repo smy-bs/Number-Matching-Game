@@ -75,13 +75,13 @@ function play() {
 
 // 모든 셋팅을 초기화하는 함수 
 function initialize(){
-  isFirst = true
-  chances = 5
-  history =[]
-  gameOver = false
-  chanceArea.innerHTML = `남은횟수: ${chances}`
-  inputNumber.value =''
-
+  isFirst = true;
+  chances = 5;
+  history =[];
+  gameOver = false;
+  chanceArea.innerHTML = `남은횟수: ${chances}`;
+  inputNumber.value ='';
+  resultArea.textContent = "Re Start";
   playButton.disabled = false;
   playButton.addEventListener('click', play);
   inputNumber.addEventListener('keydown', inputNumber);
