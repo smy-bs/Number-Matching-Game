@@ -95,7 +95,7 @@ function reset() {
   // //inputNumber 창이 깨끗하게 정리되야함
   // inputNumber.value = "";
   // // 새로운 랜덤번호가 생성되야함
-  // getRandomNum();
+  getRandomNum();
   // //  새로운 지시어를 입력해 ui에서 보여져야함
   // resultArea.textContent = "Re Start";
 
