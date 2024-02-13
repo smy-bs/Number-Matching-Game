@@ -24,13 +24,14 @@ inputNumber.addEventListener("focus", function () {
   // input 포커스가 되면 입력값 초기화
   inputNumber.value = "";
 });
-
+// enter 기능
 inputNumber.addEventListener("keydown", function (event) {
   if(event.key === "Enter"){
 
     play();
   }
 });
+
 
 function getRandomNum() {
   computerNumber = Math.floor(Math.random() * 100) + 1;
@@ -61,6 +62,7 @@ function play() {
     resultArea.textContent = " Good job !!!";
     gameOver = true;
   }
+
   history.push(userValue);
 
   if (chances < 1) {
@@ -71,19 +73,38 @@ function play() {
   }
 }
 
-function reset() {
-  //inputNumber 창이 깨끗하게 정리되야함
-  inputNumber.value = "";
-  // 새로운 랜덤번호가 생성되야함
-  getRandomNum();
-  //  새로운 지시어를 입력해 ui에서 보여져야함
-  resultArea.textContent = "Re Start";
+// 모든 셋팅을 초기화하는 함수 
+function initialize(){
+  isFirst = true
+  chances = 5
+  history =[]
+  gameOver = false
+  chanceArea.innerHTML = `남은횟수: ${chances}`
+  inputNumber.value =''
 
-  gameOver = false;
   playButton.disabled = false;
-  chances = 5;
-  chanceArea.innerHTML = `Remaining chance:${chances}`;
-  history = [];
+  playButton.addEventListener('click', play);
+  inputNumber.addEventListener('keydown', inputNumber);
+  inputNumber.addEventListener('focus', inputNumber)
+  ResetButton.addEventListener('click', reset)
+}
+initialize();
+
+
+function reset() {
+  // //inputNumber 창이 깨끗하게 정리되야함
+  // inputNumber.value = "";
+  // // 새로운 랜덤번호가 생성되야함
+  // getRandomNum();
+  // //  새로운 지시어를 입력해 ui에서 보여져야함
+  // resultArea.textContent = "Re Start";
+
+  // gameOver = false;
+  // playButton.disabled = false;
+  // chances = 5;
+  // chanceArea.innerHTML = `Remaining chance:${chances}`;
+  // history = [];
+  initialize();
   
 }
 getRandomNum();
